@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moje stranky</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@4.0.0/dist/simpleParallax.min.js"></script>
+    <script src="assets/apps.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation-float.min.css" integrity="sha256-sP0p6J7SbJGiJ2gkdY1nkVsLgdwiFN2kI370lU+zacQ= sha384-yZLxxcD8nfiSt1qfKJWwHwtkL58WZDTlkBnZN60qr3ZS35+LDsmUF2JHLxdyZ+KU sha512-Z3WbpfWFSsK2dBvoSYZnMvPmxSJUa5cxj3TYlmyj6cq8IXy7iB2nlUk+jjms8gnz4HmpQk/yhRSlRzW7keoSlg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/apps.css">
+</head>
+<body>
+<header>    
+    <div class="row">
+        <div class="large-3 columns">
+            <a href="#" class="logo">
+            Vypocty
+            </a> 
+        </div>
+    </div>
+</header>
+<div class="row">
+    <div class="large-12 columns">
+        <div style="height: 350px; overflow: hidden;">
+             <img class="parallax" src="assets/photo.jpg" alt="">
+        </div>
+    </div> 
+</div>
+
+<hr class="vertical-space1">
+
+<div class="row">
+    <div class="large-12 columns">
+        <h2 id="nadpis">Vyberte operaci</h2>
+    </div>
+    <input onclick="unarni()"type="submit" class="button" class="operace" value="Unarni">
+    <input onclick="binarni()"type="submit" class="button" class="operace" value="Binarni">
+    <input onclick="textova()"type="submit" class="button" class="operace" value="Textova">
+</div>
+
+<div class="row">
+    <div class="large-5 columns">
+        <label id="lab1" style="display:none;">
+            Zadejte cislo:
+            <input id="num1" type="number" value="0" style="display:none;">
+        </label>
+    </div>
+    <div class="large-5 columns">
+        <label id="labTxt" style="display:none;">
+            Zadejte text:
+            <input id="txt" type="text" value="" style="display:none;">
+        </label>
+    </div>
+    <div class="large-2 columns" id="select1">
+        <label>Operator:
+            <select id="operatorsBin">
+                <option id="+" value="+">+</option>
+                <option id="-" value="-">-</option>
+                <option id="/" value="/">/</option>
+            </select>
+        </label>
+    </div>
+    <div class="large-2 columns" id="select2">
+        <label>Operator:
+            <select id="operatorsUn">
+                <option id="fak" value="fact">Faktorial</option>
+                <option id="fibo" value="fibo">Fibonacci</option>
+            </select>
+        </label>
+    </div>
+    <div class="large-2 columns" id="select3">
+        <label>Algoritmus:
+            <select id="operatorsTxt">
+                <option id="rev" value="revers">Reverse</option>
+            </select>
+        </label>
+    </div>
+    
+    
+    <div class="large-5 columns">
+        <label id="lab2" style="display:none;">
+            Zadejte cislo 2:   
+            <input id="num2" type="number" value="0" style="display:none;">
+        </label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-2 columns">
+        <input id="buttonBin" onclick="spocti()"type="submit" class="button" value="Spocitej" style="display:none;">
+        <input id="buttonUn" onclick="spoctiUn()"type="submit" class="button" value="Spocitej" style="display:none;">
+        <input id="buttonTxt" onclick="spoctiTxt()"type="submit" class="button" value="Spocitej" style="display:none;">
+        
+    </div>
+    <div class="large-5 columns">
+        <label id="labRes" style="display:none;">
+            Vysledek:
+            <input id="result" type="text" style="display:none;">
+        </label> 
+    </div>
+</div>
+
+<hr class="vertical-space2">
+
+
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/js/foundation.min.js" integrity="sha256-/PFxCnsMh+nTuM0k3VJCRch1gwnCfKjaP8rJNq5SoBg= sha384-9ksAFjQjZnpqt6VtpjMjlp2S0qrGbcwF/rvrLUg2vciMhwc1UJJeAAOLuJ96w+Nj sha512-UMSn6RHqqJeJcIfV1eS2tPKCjzaHkU/KqgAnQ7Nzn0mLicFxaVhm9vq7zG5+0LALt15j1ljlg8Fp9PT1VGNmDw==" crossorigin="anonymous"></script>
+<script>
+    $(document).foundation();
+    var image = document.getElementsByClassName("parallax");
+    new simpleParallax(image, {
+	scale: 1.8
+});
+</script>
+</body>
+</html>

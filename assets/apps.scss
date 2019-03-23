@@ -1,0 +1,99 @@
+@import "variables.scss";
+@import "menu.scss";
+
+// nektere styly nejsou pouzity - pouzivam jako template pro predmet Moderni web. technologie
+.vertical-space0{
+  display: block;
+  clear: both;
+  border: 0;
+}
+
+.vertical-space1{
+  @extend.vertical-space0;
+  height: 10px;
+}
+
+.vertical-space2{
+  @extend.vertical-space0;
+  height: 20px;
+}
+
+.vertical-space3{
+  @extend.vertical-space0;
+  height: 30px;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -moz-border-radius: $radius;
+  
+}
+
+
+footer{
+  background-color: $barva-head;
+  height: 140px;
+
+  .fa{
+  padding: 30px;
+  font-size: 40px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  }
+}
+
+.odkazy{
+ list-style: none;
+ line-height: 28px;
+ display: block;
+
+ h4{
+   color: #fff;
+ }
+
+ ul{
+   li>a{
+     color: #fff;
+     
+   }
+ }
+ 
+}
+
+.adresy{
+  color: #fff;
+  padding: 20px;
+  display: block;
+  line-height: 20px;
+  
+
+}
+
+.scroll-up{
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: none;
+  color: #000;
+
+}
+
+#select1{
+  display: none
+}
+
+#select2{
+  display: none
+}
+
+#select3{
+  display: none
+}
+
+#nadpis{
+  text-align: center;
+}
